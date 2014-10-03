@@ -1,6 +1,12 @@
 [user]
-	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+	name = Alex Dunae
+	email = alex@dunae.ca
+[diff]
+    tool = opendiff
+[difftool]
+    prompt = false
+[difftool "opendiff"]
+    cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" -merge \"$MERGED\" | cat
 [alias]
 	co = checkout
 [color]
@@ -8,13 +14,47 @@
 	status = auto
 	branch = auto
 [core]
+	editor = subl -n -w
+	quotepath = false
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
-	autocrlf = input
 [apply]
 	whitespace = nowarn
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
-	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
+	user = alexdunae
 	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+[merge]
+	tool = opendiff
+[credential]
+	helper = osxkeychain
+[mergetool "kdiff3"]
+	path =
+[color]
+	ui = true
+[difftool]
+	prompt = false
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[mergetool]
+	keepBackup = false
+[alias]
+  head = !git l -1
+    h = !git head
+    hp = "!. ~/.githelpers && show_git_head"
+    r = !git l -30
+    ra = !git r --all
+    l = "!. ~/.githelpers && pretty_git_log"
+    la = !git l --all
+    co = checkout
+    cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+    h = !git head
+    hp = "!. ~/.githelpers && show_git_head"
+    r = !git l -30
+    ra = !git r --all
+    l = "!. ~/.githelpers && pretty_git_log"
+    la = !git l --all
+[push]
+  default = current
