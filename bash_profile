@@ -15,7 +15,7 @@ alias rc='rails console'
 alias be='bundle exec'
 alias brake='bundle exec rake'
 alias bems='bundle exec middleman server'
-alias bems='bundle exec guard'
+alias beg='bundle exec guard'
 
 
 # https://github.com/garybernhardt/dotfiles/blob/master/.bashrc
