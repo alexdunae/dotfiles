@@ -51,9 +51,11 @@ subp() {
 
   if [ "$sublime_project" = "" ]; then
     sublime_project="."
+    $sublime_path .
+    exit 0
   fi
 
-  $sublime_path $sublime_project
+  $sublime_path --project $sublime_project
 }
 
 
