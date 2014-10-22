@@ -31,7 +31,8 @@ if [ -f /etc/bash_completion ]; then
 . /etc/bash_completion
 fi
 
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+source `xcode-select --print-path`/usr/share/git-core/git-prompt.sh
+source `xcode-select --print-path`/usr/share/git-core/git-completion.bash
 
 export PS1='\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
