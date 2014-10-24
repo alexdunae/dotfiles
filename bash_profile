@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin/psql:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin/psql:/usr/local/heroku/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export EDITOR="/usr/local/bin/subl -w"
 
 export GOPATH=$HOME/Code/go
