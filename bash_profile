@@ -3,6 +3,7 @@ export EDITOR="/usr/local/bin/subl -w"
 
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
+export CC=/usr/bin/gcc
 
 alias ls='ls -alhG'
 alias gco='git checkout'
