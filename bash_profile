@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin/psql:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin/psql:/usr/local/heroku/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export EDITOR="/usr/local/bin/subl -w"
 
 export GOPATH=$HOME/Code/go
@@ -31,8 +31,8 @@ if [ -f /etc/bash_completion ]; then
 . /etc/bash_completion
 fi
 
-source `xcode-select --print-path`/usr/share/git-core/git-prompt.sh
-source `xcode-select --print-path`/usr/share/git-core/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 export PS1='\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
