@@ -15,6 +15,7 @@ alias rc='rails console'
 alias be='bundle exec'
 alias brake='bundle exec rake'
 alias bems='bundle exec middleman server'
+alias bemd='bundle exec middleman deploy'
 alias beg='bundle exec guard'
 
 
