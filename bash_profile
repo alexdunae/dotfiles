@@ -79,6 +79,8 @@ function rlc() {
 function rls() {
   if [ -x bin/foreman ]; then
     bin/foreman start --port=3000 $@
+  elif [ -a Procfile.dev ]; then
+    bundle exec foreman start -f Procfile.dev $@
   elif [ -a Procfile ]; then
     bundle exec foreman start --port=3000 $@
   elif [ -x bin/rails ]; then
