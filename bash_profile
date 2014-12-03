@@ -78,9 +78,9 @@ function rlc() {
 # server
 function rls() {
   if [ -x bin/foreman ]; then
-    bin/foreman start $@
+    bin/foreman start --port=3000 $@
   elif [ -a Procfile ]; then
-    bundle exec foreman start $@
+    bundle exec foreman start --port=3000 $@
   elif [ -x bin/rails ]; then
     bin/rails server $@
   elif [ -x script/server ]; then
@@ -100,4 +100,3 @@ function rlg() {
     bundle exec rails generate $@
   fi
 }
-
