@@ -20,6 +20,10 @@ alias bems='bundle exec middleman server'
 alias bemd='bundle exec middleman deploy'
 alias beg='bundle exec guard'
 
+# thanks thoughtbot
+alias path='echo $PATH | tr -s ":" "\n"'
+alias t="ruby -I test"
+
 
 # https://github.com/garybernhardt/dotfiles/blob/master/.bashrc
 
