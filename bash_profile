@@ -19,6 +19,8 @@ alias sbrake='sudo bundle exec rake'
 alias bems='bundle exec middleman server'
 alias bemd='bundle exec middleman deploy'
 alias beg='bundle exec guard'
+alias tlog='tail -n250 -f log/test.log'
+alias dlog='tail -n250 -f log/development.log'
 
 # thanks thoughtbot
 alias path='echo $PATH | tr -s ":" "\n"'
