@@ -47,6 +47,7 @@ export PS1='\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+if which thefuck > /dev/null; then eval "$(thefuck --alias)"; fi
 
 # open Sublime Text using the first *.sublime-project in the current directory
 # otherwise just use the current directory
