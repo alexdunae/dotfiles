@@ -1,9 +1,12 @@
 AllCops:
-  TargetRubyVersion: 2.2.3
+  TargetRubyVersion: 2.4.1
 
 LineLength:
   Max: 100
   Enabled: true
 
 Documentation:
+  Enabled: false
+
+NumericPredicate:
   Enabled: false
