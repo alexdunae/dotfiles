@@ -1,33 +1,15 @@
-export PATH="/usr/local/bin/psql:/usr/local/heroku/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin/psql:/usr/local/heroku/bin:$HOME/.fastlane/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export PATH=~/Library/Android/sdk/tools:$PATH
 export PATH=~/Library/Android/sdk/platform-tools:$PATH
 export EDITOR="/usr/local/bin/subl -w"
-
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 export CC=/usr/bin/gcc
 
-alias ls='ls -alhG'
-alias gco='git checkout'
-alias gd='git diff'
-alias gl='git l'
-alias gp='git push'
-alias gs='git status'
-alias gpr='git pull --rebase'
-alias rc='rails console'
-alias be='bundle exec'
-alias brake='bundle exec rake'
-alias sbrake='sudo bundle exec rake'
-alias bems='bundle exec middleman server'
-alias bemd='bundle exec middleman deploy'
-alias beg='bundle exec guard'
-alias tlog='tail -n250 -f log/test.log'
-alias dlog='tail -n250 -f log/development.log'
-
-# thanks thoughtbot
-alias path='echo $PATH | tr -s ":" "\n"'
-alias t="ruby -I test"
-
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:~/Library/Python/3.4/bin:~/Library/Python/2.7/bin
 
 # https://github.com/garybernhardt/dotfiles/blob/master/.bashrc
 
@@ -50,6 +32,33 @@ export PS1='\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 if which thefuck > /dev/null; then eval "$(thefuck --alias)"; fi
+
+
+alias ls='ls -alhG'
+alias gco='git checkout'
+__git_complete gco _git_checkout
+alias gd='git diff'
+alias gl='git l'
+alias gp='git push'
+__git_complete gp _git_push
+alias gbr='git branch'
+__git_complete gbr _git_branch
+alias gs='git status'
+alias gpr='git pull --rebase'
+alias rc='rails console'
+alias be='bundle exec'
+alias brake='bundle exec rake'
+alias sbrake='sudo bundle exec rake'
+alias bems='bundle exec middleman server'
+alias bemd='bundle exec middleman deploy'
+alias beg='bundle exec guard'
+alias tlog='tail -n250 -f log/test.log'
+alias dlog='tail -n250 -f log/development.log'
+alias cat=ccat
+
+# thanks thoughtbot
+alias path='echo $PATH | tr -s ":" "\n"'
+alias t="ruby -I test"
 
 # open Sublime Text using the first *.sublime-project in the current directory
 # otherwise just use the current directory
@@ -114,3 +123,9 @@ function rlg() {
   fi
 }
 export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Alex/google-cloud-sdk/path.bash.inc' ]; then . '/Users/Alex/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Alex/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/Alex/google-cloud-sdk/completion.bash.inc'; fi
