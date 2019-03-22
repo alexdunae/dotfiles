@@ -113,3 +113,4 @@ function rlg() {
     bundle exec rails generate $@
   fi
 }
+export PATH="/usr/local/opt/node@8/bin:$PATH"
