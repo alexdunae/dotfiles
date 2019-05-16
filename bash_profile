@@ -125,7 +125,7 @@ function rlg() {
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/Alex/google-cloud-sdk/path.bash.inc' ]; then . '/Users/Alex/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/Alex/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/Alex/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '~/google-cloud-sdk/completion.bash.inc'; fi
