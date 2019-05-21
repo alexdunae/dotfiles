@@ -80,7 +80,11 @@ subp() {
   $sublime_path --project $sublime_project
 }
 
-
+if command -v lsd >/dev/null 2>&1; then
+  alias ls='lsd -l'
+  alias la='lsd -alh'
+  alias lt='lsd -rt' # most recently modified last
+fi
 
 # https://github.com/JEG2/dotfiles/blob/master/bash/aliases
 
