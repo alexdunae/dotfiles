@@ -18,6 +18,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/Library/Python/3.4/bin:~/Library/Python/2.7/bin
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 export CC=/usr/bin/gcc
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups
