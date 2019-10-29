@@ -101,6 +101,12 @@ function rlc() {
   fi
 }
 
+function tt() {
+  if [ -x bin/rake ]; then
+    bin/rake test TEST="$@"
+  fi
+}
+
 # server
 function rls() {
   if [ -x bin/foreman ]; then
@@ -134,3 +140,5 @@ if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
