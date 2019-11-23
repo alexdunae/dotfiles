@@ -4,7 +4,7 @@
 # https://github.com/garybernhardt/dotfiles/blob/master/.bashrc
 # https://github.com/JEG2/dotfiles/blob/master/bash/aliases
 
-
+export GEM_HOME=$HOME/.gem
 export EDITOR="/usr/local/bin/subl -w"
 export GOPATH=$HOME/Code/go
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -31,20 +31,23 @@ export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
 
-if [ -f /etc/bash_completion ]; then
-. /etc/bash_completion
-fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
 export PS1='\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
-if command -v rbenv >/dev/null 2>&1; then eval "$(rbenv init -)"; fi
+# brew install lsd
+# brew tap homebrew/cask-fonts
+# brew cask install font-hack-nerd-font
+# https://github.com/Peltoche/lsd/issues/199#issuecomment-494218334
+if command -v lsd >/dev/null 2>&1; then
+  alias ls='lsd -l'
+  alias la='lsd -alh'
+  alias lt='lsd -l -rt' # most recently modified last
+fi
 
-if command -v thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
-
-alias ls='ls -alhG'
 alias gco='git checkout'
 __git_complete gco _git_checkout
 alias gd='git diff'
@@ -88,13 +91,6 @@ subp() {
   $sublime_path --project "$sublime_project"
 }
 
-# brew install lsd
-if command -v lsd >/dev/null 2>&1; then
-  alias ls='lsd -l'
-  alias la='lsd -alh'
-  alias lt='lsd -rt' # most recently modified last
-fi
-
 # console
 function rlc() {
   if [ -x bin/rails ]; then
@@ -103,12 +99,6 @@ function rlc() {
     script/console "$@"
   else
     bundle exec rails console "$@"
-  fi
-}
-
-function tt() {
-  if [ -x bin/rake ]; then
-    bin/rake test TEST="$@"
   fi
 }
 
@@ -147,3 +137,5 @@ if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk
 if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-cloud-sdk/completion.bash.inc"; fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+eval "$(rbenv init -)"
