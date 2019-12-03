@@ -20,7 +20,3 @@ Style/Documentation:
 
 Style/NumericPredicate:
   Enabled: false
-
-Layout/AlignHash:
-  EnforcedHashRocketStyle: table
-  EnforcedColonStyle: table
