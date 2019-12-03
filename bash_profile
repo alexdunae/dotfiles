@@ -66,6 +66,8 @@ alias bems='bundle exec middleman server'
 alias bemd='bundle exec middleman deploy'
 alias tlog='tail -n250 -f log/test.log'
 alias dlog='tail -n250 -f log/development.log'
+
+# brew install ccat
 alias cat=ccat
 
 # thanks thoughtbot
