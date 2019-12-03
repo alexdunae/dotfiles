@@ -4,7 +4,7 @@
 # https://github.com/garybernhardt/dotfiles/blob/master/.bashrc
 # https://github.com/JEG2/dotfiles/blob/master/bash/aliases
 
-export GEM_HOME=$HOME/.gem
+# export GEM_HOME=$HOME/.gem
 export EDITOR="/usr/local/bin/subl -w"
 export GOPATH=$HOME/Code/go
 export ANDROID_HOME=$HOME/Library/Android/sdk
