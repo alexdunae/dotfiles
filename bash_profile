@@ -8,16 +8,16 @@
 export EDITOR="/usr/local/bin/subl -w"
 export GOPATH=$HOME/Code/go
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # https://support.apple.com/en-ca/HT208050
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export PATH="/usr/local/bin/psql:/usr/local/heroku/bin:$HOME/.fastlane/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-export PATH=~/Library/Android/sdk/tools:$PATH
-export PATH=~/Library/Android/sdk/platform-tools:$PATH
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/Library/Python/3.4/bin:~/Library/Python/2.7/bin
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 export CC=/usr/bin/gcc
