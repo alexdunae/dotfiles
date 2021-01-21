@@ -23,6 +23,13 @@ export PATH="/usr/local/opt/node@8/bin:$PATH"
 export CC=/usr/bin/gcc
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/Users/alex/Library/Python/3.8/bin:$PATH"
+
+# VS Code
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export REACT_EDITOR=code
+
+export MATCH_PASSWORD="WBXaSGR[S6:\`rM7Z&[:54\9B1"
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups
@@ -61,6 +68,8 @@ alias gpr='git pull --rebase'
 alias rc='rails console'
 alias be='bundle exec'
 alias brake='bundle exec rake'
+alias tc='bundle exec srb tc'
+alias rfa='bundle exec rubocop -a '
 alias sbrake='sudo bundle exec rake'
 alias bems='bundle exec middleman server'
 alias bemd='bundle exec middleman deploy'
@@ -141,3 +150,9 @@ if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then . "$HOME/google-clo
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 eval "$(rbenv init -)"
+. "/Users/alex/.acme.sh/acme.sh.env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source "$HOME/.cargo/env"
